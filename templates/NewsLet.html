@@ -1,24 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-</head>
-<body>
-    <h1>Upcoming Events</h1>
-    <ul>
-        {% for event in events %}
-            <li>
-                <h2>{{ event['headline'] }}</h2>
-                <p>{{ event['description'] }}</p>
-                <p>Date: {{ event['date'] }}</p>
-                <p>Location: {{ event['location'] }}</p>
-                <a href="{{ event['link'] }}" target="_blank">Read more</a>
-            </li>
-        {% endfor %}
-    </ul>
-<footer>NOTE: We Do not own any content displayed in this page and is solely for education purpose only.</footer>
-</body>
-</html>
+<div class="NewsletFrame" style="width: 100%; height: 100%; position: relative; background: white">
+  <div class="Rectangle2" style="width: 100%; height: 120px; background: rgba(248.82, 242.37, 225.81, 0.61); box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); border-radius: 88px"></div>
+      <div class="OutlineGroupsBlack24dp1" style="width: 33px; height: 41px; left: 660px; top: 52px; position: absolute; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+        <img class="OutlineGroupsBlack24dp1" style="width: 100%; height: 100%" src="/static/imageAts/outline_groups_black_24dp.png"  alt="Group"/>
+      </div>
+      <div class="OutlinePersonBlack24dp1" style="width: 31px; height: 41px; left: 1132px; top: 46px; position: absolute; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+        <img class="OutlinePersonBlack24dp1" style="width: 100%; height: 100%" src="/static/imageAts/outline_person_black_24dp.png"  alt="profile"/>
+      </div>
+      <div class="OutlineLocalLibraryBlack24dp1" style="width: 33px; height: 41px; left: 734px; top: 52px; position: absolute; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+        <img class="OutlineLocalLibraryBlack24dp1" style="width: 33px; height: 41px" src="/static/imageAts/outline_local_library_black_24dp.png"  alt="Newslet"/>
+      </div>
+      <div class="OutlineMenuBlack24dp1" style="width: 33px; height: 43px; left: 1186px; top: 48px; position: absolute; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+        <img class="OutlineMenuBlack24dp1" style="width: 33px; height: 43px" src="/static/imageAts/outline_menu_black_24dp.png"  alt="Menu"/>
+      </div>
+      <div class="OutlineDiversity2Black24dp1" style="width: 33px; height: 41px; left: 512px; top: 52px; position: absolute; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+        <img class="OutlineDiversity2Black24dp1" style="width: 33px; height: 41px" src="/static/imageAts/outline_diversity_2_black_24dp.png"  alt="community"/>
+      </div>
+      <div class="Home" style="width: 32px; height: 41px; left: 583px; top: 53px; position: absolute; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+        <img class="HomeDefault" style="width: 32px; height: 41px" src="../static/imageAts/outline_home_black_24dp.png"  alt="Home"/>
+      </div>
+      <div class="OutlineNotificationsBlack24dp1" style="width: 34px; height: 40px; left: 1050px; top: 41px; position: absolute; transform: rotate(20deg); transform-origin: 0 0; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+        <img class="OutlineNotificationsBlack24dp1" style="width: 34px; height: 40px" src="/static/imageAts/outline_notifications_black_24dp.png"  alt="notification"/>
+      </div>
+      <button class="Logo" style="width: 15%; height: 20%; left: 20px; top: -21px; position: absolute; border: none; background: none;" onclick="location.href='your_logo_link_here'">
+    <img src="../static/imageAts/logo.png" alt="Home" style="width: 100%; height: 100%;">
+</button>
+
+<div class="Search" style="width: 50px; height: 30px; left: 1078px; top: 50px; position: absolute; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+    <button class="OutlineSearchBlack24dp1" style="width: 31px; height: 41px; border: none; background: none;" onclick="location.href='your_search_link_here'">
+        <img src="../static/imageAts/outline_search_black_24dp.png" alt="Search" style="width: 100%; height: 100%;">
+    </button>
+</div>
+
+    <div class="Events" style="width: 814px; height: 88px; margin: 20px auto;position: relative; text-align: center; color: black; font-size: 48px; font-family: Inria Serif,serif; font-weight: 400; word-wrap: break-word;z-index: 1">EVENTS</div>
+
+  {% for event in events %}
+    <div class="Rectangle8" style="width: 1200px; height: 242px; margin: 20px auto; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); border-radius: 25px; border: 5px #F9F2E2 solid; position: relative;">
+      <div style="width: 100%; height: 100%">
+          <div class="Headline" style="width: 100%; height: 73px;padding-top: 30px; text-align: center; color: black; font-size: 30px; font-family: Inria Serif,serif; font-weight: 400; word-wrap: break-word">{{ event['headline'] }}</div>
+<!--          <div class="Headline" style="width: 100%; max-width: 452px; height: 73px; margin: 0 auto; text-align: center; color: black; font-size: 100%; font-family: 'Inria Serif', serif; font-weight: 400; word-wrap: break-word;">{{ event['headline'] }}</div>-->
+          <div class="Description" style="width: 100%; max-width: 1000px; margin: 0 auto; color: black; font-size: 16px; font-family: 'Inria Serif', serif; font-weight: 400; word-wrap: break-word">{{ event['description'] }} <a class="ReadMore" href="{{ event['link'] }}" style="width: 100%; max-width: 873px; margin: 0 auto; color: black; font-size: 16px; font-family: 'Inria Serif', serif; font-weight: 400; text-decoration: underline; word-wrap: break-word">Read more</a></div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

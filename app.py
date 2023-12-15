@@ -40,7 +40,7 @@ def index():
             })
 
         # Render the HTML template with the extracted information
-        return render_template('index.html', events=events)
+        return render_template('NewsLet.html', events=events)
 
     else:
         return f'Failed to retrieve the webpage. Status code: {response.status_code}'
